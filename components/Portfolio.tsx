@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+
 "use client";
 
 import { useRef } from "react";
@@ -193,7 +195,7 @@ export default function Portfolio() {
                       className="
                         showcase-image
                         w-full
-                        h-[420px] md:h-[480px]
+                        h-105 md:h-120
                         object-cover
                         scale-105
                       "

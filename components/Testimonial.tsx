@@ -141,7 +141,7 @@ export default function Testimonials() {
               <div
                 key={`${item.id}-${index}`}
                 // Tanpa background, murni pemisah garis vertikal (border-r)
-                className="w-[85vw] sm:w-[600px] md:w-[700px] flex flex-col justify-between shrink-0 px-6 md:px-12 group"
+                className="w-[85vw] sm:w-150 md:w-175 flex flex-col justify-between shrink-0 px-6 md:px-12 group"
               >
                 <div className="bg-white px-16 py-12">
                   <div className="flex flex-col">

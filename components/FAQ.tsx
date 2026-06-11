@@ -201,7 +201,7 @@ function FAQRow({
         onClick={onClick}
         className="w-full py-10 md:py-12 text-left flex items-start justify-between gap-6 relative overflow-hidden"
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#D67341]/[0.03] to-transparent w-0 group-hover:w-full transition-all duration-700 ease-out z-0" />
+        <div className="absolute inset-0 bg-linear-to-r from-[#D67341]/3 to-transparent w-0 group-hover:w-full transition-all duration-700 ease-out z-0" />
 
         <div className="flex gap-6 md:gap-12 items-start relative z-10 w-full pr-8">
           <span
@@ -219,7 +219,7 @@ function FAQRow({
         </div>
 
         <div
-          className={`relative w-8 h-8 shrink-0 mt-2 flex items-center justify-center rounded-full border transition-all duration-500 z-10 bg-[#050505] hidden sm:flex
+          className={`relative w-8 h-8 shrink-0 mt-2 flex items-center justify-center rounded-full border transition-all duration-500 z-10 bg-[#050505] sm:flex
                         ${isOpen ? "border-[#D67341] bg-[#D67341]/10" : "border-neutral-800 group-hover:border-neutral-600"}`}
         >
           <svg
@@ -244,10 +244,7 @@ function FAQRow({
         }`}
       >
         <div className="overflow-hidden">
-          <div
-            ref={answerRef}
-            className="pl-[3rem] md:pl-[4.5rem] pr-6 md:pr-20"
-          >
+          <div ref={answerRef} className="pl-12 md:pl-18 pr-6 md:pr-20">
             <p className="text-base md:text-xl lg:text-2xl text-neutral-400 font-light leading-relaxed">
               {item.answer}
             </p>
