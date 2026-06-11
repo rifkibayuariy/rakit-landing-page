@@ -75,7 +75,7 @@ export default function Footer() {
     // Bagian atas melengkung (rounded-t-[3rem]) adalah tren absolut di web design 2024+
     <footer
       ref={containerRef}
-      className="relative w-full bg-[#050505] text-white overflow-hidden mt-[-2rem] z-20 shadow-[0_-20px_50px_rgba(0,0,0,0.5)]"
+      className="relative w-full bg-[#050505] text-white overflow-hidden -mt-8 z-20 shadow-[0_-20px_50px_rgba(0,0,0,0.5)]"
     >
       {/* Background Noise Minimalis */}
       <div
@@ -172,7 +172,7 @@ export default function Footer() {
             </div>
 
             {/* Garis bawah interaktif yang menyapu dari kiri ke kanan */}
-            <div className="absolute bottom-0 left-0 w-full h-[3px] md:h-[5px] bg-[#D67341] scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-700 ease-expo"></div>
+            <div className="absolute bottom-0 left-0 w-full h-0.75 md:h-1.25 bg-[#D67341] scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-700 ease-expo"></div>
           </a>
         </div>
 
@@ -269,7 +269,7 @@ export default function Footer() {
           <div className="hidden sm:block w-px h-3 bg-neutral-800" />
           <div className="flex items-center gap-2">
             <span className="text-neutral-500">SYS_TIME:</span>
-            <span className="tabular-nums w-[70px] text-right text-[#D67341]">
+            <span className="tabular-nums w-17.5 text-right text-[#D67341]">
               {time}
             </span>
           </div>
