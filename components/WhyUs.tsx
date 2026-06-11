@@ -11,29 +11,33 @@ if (typeof window !== "undefined") {
 
 const reasons = [
   {
-    title: "Transfer Knowledge",
+    title: "Learn Before You Build",
     description:
-      "Dokumentasi lengkap, source code terstruktur, dan knowledge transfer sehingga sistem dapat dikembangkan secara mandiri setelah implementasi.",
+      "E-Book kami tidak hanya menjelaskan teori, tetapi juga memberikan wiring diagram, source code, dan langkah implementasi yang dapat langsung dipraktikkan.",
   },
+
   {
-    title: "Built Around Your Needs",
+    title: "Custom From Scratch",
     description:
-      "Setiap solusi dirancang dari kebutuhan operasional yang nyata, bukan sekadar menyesuaikan template yang sudah ada.",
+      "Setiap proyek dirancang berdasarkan kebutuhan Anda. Mulai dari firmware, integrasi sensor, komunikasi data, hingga dashboard monitoring.",
   },
+
   {
-    title: "Rapid Prototyping",
+    title: "Prototype To Product",
     description:
-      "Ide dapat divalidasi lebih cepat melalui iterasi prototipe sebelum masuk ke tahap produksi yang lebih besar.",
+      "Tidak berhenti di rangkaian elektronik. Kami membantu mewujudkan enclosure dan komponen fisik melalui layanan 3D printing dan rapid prototyping.",
   },
+
   {
-    title: "Reliable Execution",
+    title: "Built By Engineers",
     description:
-      "Pendekatan engineering yang terukur untuk memastikan sistem stabil dan dapat digunakan dalam jangka panjang.",
+      "Pendekatan engineering digunakan pada setiap tahap pengembangan agar sistem tetap stabil, terukur, dan mudah dikembangkan di masa depan.",
   },
+
   {
-    title: "Efficient Investment",
+    title: "One Ecosystem",
     description:
-      "Fokus pada solusi yang memberikan dampak nyata tanpa kompleksitas dan biaya yang tidak diperlukan.",
+      "Belajar sendiri melalui e-book, meminta kami mengembangkan proyek, hingga mencetak produk fisiknya. Semua berada dalam satu ekosistem yang saling terhubung.",
   },
 ];
 
@@ -222,7 +226,7 @@ export default function WhyUs() {
           pointer-events-none
         "
       >
-        ENGINEERED FOR REALITY
+        FROM IDEA TO REALITY
       </div>
 
       <div className="relative max-w-7xl mx-auto px-8 md:px-16 lg:px-24 py-32 md:py-40">
@@ -240,19 +244,13 @@ export default function WhyUs() {
           <div className="why-title">
             <div className="overflow-hidden">
               <span className="title-word inline-block text-5xl md:text-7xl lg:text-[6rem] leading-[0.9] tracking-tight font-medium">
-                Cara Kami
+                Dari Ide, Menjadi
               </span>
             </div>
 
             <div className="overflow-hidden">
               <span className="title-word inline-block text-5xl md:text-7xl lg:text-[6rem] leading-[0.9] tracking-tight font-medium">
-                Membangun
-              </span>
-            </div>
-
-            <div className="overflow-hidden">
-              <span className="title-word inline-block text-5xl md:text-7xl lg:text-[6rem] leading-[0.9] tracking-tight font-medium">
-                Sistem.
+                Realitas.
               </span>
             </div>
           </div>
