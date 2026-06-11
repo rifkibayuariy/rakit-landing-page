@@ -168,7 +168,7 @@ export default function Portfolio() {
           </span>
         </div>
 
-        <h2 className="text-4xl md:text-[6rem] lg:text-[7rem] leading-[0.9] tracking-tight font-medium max-w-5xl">
+        <h2 className="text-5xl md:text-[5rem] lg:text-[6rem] leading-[0.9] tracking-tight font-medium max-w-5xl">
           Bukti yang
           <br />
           sudah bekerja
