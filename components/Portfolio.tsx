@@ -90,8 +90,6 @@ export default function Portfolio() {
         .forEach((projectBlock) => {
           const image = projectBlock.querySelector(".showcase-image");
           const title = projectBlock.querySelector(".showcase-title");
-          const number = projectBlock.querySelector(".floating-number");
-          const timeline = projectBlock.querySelector(".timeline-progress");
 
           gsap.to(image, {
             y: -10,
@@ -110,14 +108,6 @@ export default function Portfolio() {
             ease: "sine.inOut",
           });
 
-          gsap.to(number, {
-            y: -25,
-            duration: 8,
-            repeat: -1,
-            yoyo: true,
-            ease: "sine.inOut",
-          });
-
           gsap.from(projectBlock, {
             opacity: 0,
             y: 100,
@@ -128,34 +118,7 @@ export default function Portfolio() {
               start: "top 80%",
             },
           });
-
-          gsap.fromTo(
-            timeline,
-            {
-              scaleY: 0,
-            },
-            {
-              scaleY: 1,
-              ease: "none",
-              scrollTrigger: {
-                trigger: projectBlock,
-                start: "top center",
-                end: "bottom center",
-                scrub: true,
-              },
-            },
-          );
         });
-
-      gsap.to(".timeline-node", {
-        opacity: 0.3,
-        scale: 0.85,
-        duration: 1.4,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-        stagger: 0.15,
-      });
 
       gsap.fromTo(
         ".light-pass",
@@ -239,7 +202,7 @@ export default function Portfolio() {
                     <div
                       className="
   absolute inset-0
-  bg-gradient-to-t
+  bg-linear-to-t
   from-black/50
   via-black/10
   to-transparent

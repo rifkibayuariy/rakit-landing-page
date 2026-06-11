@@ -222,7 +222,7 @@ export default function WhyUs() {
           md:text-[14vw]
           leading-none
           font-medium
-          text-white/[0.025]
+          text-white/2.5
           pointer-events-none
         "
       >
