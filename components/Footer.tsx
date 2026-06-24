@@ -4,7 +4,6 @@ import { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { sendGAEvent } from "@next/third-parties/google";
 import Link from "next/link";
 
 if (typeof window !== "undefined") {
@@ -161,13 +160,14 @@ export default function Footer() {
 
           <a
             href="mailto:rakit@gmail.com"
-            onClick={() =>
-              sendGAEvent({
-                event: "click_email",
-                category: "Contact",
-                label: "Email Footer Raksasa",
-              })
-            }
+            onClick={() => {
+              if (typeof window !== "undefined" && window.gtag) {
+                window.gtag("event", "click_email", {
+                  category: "Contact",
+                  label: "Email Footer Raksasa",
+                });
+              }
+            }}
             className="group block w-max relative"
           >
             <div className="massive-text flex">
@@ -235,13 +235,14 @@ export default function Footer() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() =>
-                    sendGAEvent({
-                      event: "click_jaringan",
-                      category: "Social Links",
-                      label: social.name,
-                    })
-                  }
+                  onClick={() => {
+                    if (typeof window !== "undefined" && window.gtag) {
+                      window.gtag("event", "click_jaringan", {
+                        category: "Social Links",
+                        label: social.name,
+                      });
+                    }
+                  }}
                   className="flex items-center justify-between py-4 border-b border-neutral-900 group hover:border-[#D67341] transition-colors duration-500"
                 >
                   <span className="text-xl md:text-2xl font-light tracking-tight text-neutral-400 group-hover:text-white transition-colors duration-500">
