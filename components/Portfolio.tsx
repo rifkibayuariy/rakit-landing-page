@@ -140,6 +140,7 @@ export default function Portfolio() {
 
   return (
     <section
+      id="portfolio"
       ref={sectionRef}
       className="w-full bg-[#050505] border-t border-neutral-900"
     >

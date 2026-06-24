@@ -4,12 +4,14 @@ import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
+import Link from "next/link";
+
 gsap.registerPlugin(useGSAP);
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
   const counterRef = useRef<HTMLSpanElement>(null);
-  const btnRef = useRef<HTMLButtonElement>(null);
+  const btnRef = useRef<HTMLAnchorElement>(null);
   const textParallaxRef = useRef<HTMLHeadingElement>(null);
 
   // Efek Magnetic pada Tombol & Parallax pada Teks Utama
@@ -220,6 +222,7 @@ export default function Hero() {
 
   return (
     <section
+      id="hero"
       ref={containerRef}
       className="relative w-full min-h-svh bg-[#050505] text-white overflow-hidden flex flex-col justify-center perspective-[1000px]"
     >
@@ -337,7 +340,9 @@ export default function Hero() {
 
           {/* Magnetic CTA Button */}
           <div className="hero-desc mt-2 w-full sm:w-fit">
-            <button
+            <Link
+              href="https://wa.me/6281937894157"
+              target="_blank"
               ref={btnRef}
               className="group relative flex items-center justify-between sm:justify-start gap-6 w-full sm:w-fit px-6 sm:px-8 py-3.5 bg-black/40 backdrop-blur-sm border border-neutral-800 rounded-full overflow-hidden transition-colors duration-500 hover:border-[#D67341] cursor-pointer shadow-xl will-change-transform"
             >
@@ -375,7 +380,7 @@ export default function Hero() {
                   />
                 </svg>
               </div>
-            </button>
+            </Link>
           </div>
         </div>
       </div>

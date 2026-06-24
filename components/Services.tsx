@@ -7,6 +7,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
+import Link from "next/link";
+
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger, useGSAP);
 }
@@ -18,6 +20,8 @@ const servicesData = [
     title: "Custom Microcontroller",
     desc: "Kami merancang otak dari sistem Anda. Pemrograman logika sirkuit spesifik yang dieksekusi tanpa latensi untuk mengontrol ekosistem IoT secara presisi.",
     specs: ["ESP32 / Arduino", "Custom Firmware", "Low-Latency Logic"],
+    btnText: "Pesan Proyek Custom",
+    url: "https://wa.me/6281937894157", // Mengarah ke WhatsApp Business
     image:
       "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop",
   },
@@ -27,6 +31,8 @@ const servicesData = [
     title: "3D Printing & Enclosure",
     desc: "Sirkuit presisi menuntut cangkang yang solid. Transformasi model CAD digital menjadi wujud fisik menggunakan material kelas industri dengan akurasi dimensi tingkat tinggi.",
     specs: ["Rapid Prototyping", "Industrial Grade", "Micrometer Precision"],
+    btnText: "Mulai Fabrikasi Fisik",
+    url: "https://wa.me/6281937894157", // Mengarah ke WhatsApp Business
     image:
       "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop",
   },
@@ -36,6 +42,8 @@ const servicesData = [
     title: "Project E-Book",
     desc: "Literatur premium dan cetak biru komprehensif lengkap dengan skema kabel dan source code siap pakai. Untuk Anda yang ingin merakit dan menguasai arsitekturnya sendiri.",
     specs: ["Step-by-step Guide", "Source Code Included", "Circuit Schematics"],
+    btnText: "Dapatkan E-Book",
+    url: "https://lynk.id/rakitproject", // Mengarah ke Lynk.id bisnis Anda
     image:
       "https://images.unsplash.com/photo-1555664424-778a1e5e1b48?q=80&w=2070&auto=format&fit=crop",
   },
@@ -85,8 +93,8 @@ export default function Services() {
   );
 
   return (
-    // Struktur utama: Flex row di desktop, column di mobile
     <section
+      id="services"
       ref={containerRef}
       className="relative w-full bg-[#050505] text-white flex flex-col md:flex-row border-t border-neutral-900"
     >
@@ -94,7 +102,6 @@ export default function Services() {
           KOLOM KIRI: STICKY TITLE (Editorial Vibe)
       ========================================= */}
       <div className="w-full md:w-5/12 lg:w-1/2 relative md:border-r border-neutral-900">
-        {/* Posisi Sticky: Menempel di layar tanpa menghentikan scroll global */}
         <div className="md:sticky md:top-0 md:h-screen flex flex-col justify-center px-8 md:px-16 lg:px-24 py-20 md:py-0 z-20">
           <div className="flex items-center gap-4 mb-8">
             <div className="w-8 h-px bg-[#D67341]" />
@@ -103,7 +110,6 @@ export default function Services() {
             </span>
           </div>
 
-          {/* Tipografi Masif, sangat bersih */}
           <h2 className="text-5xl lg:text-[5.5rem] font-medium tracking-tight text-white leading-[1.05]">
             Membawa <br />
             <span className="text-neutral-500 italic">abstraksi</span> <br />
@@ -124,11 +130,10 @@ export default function Services() {
         {servicesData.map((service) => (
           <div
             key={service.id}
-            className="relative min-h-[80vh] md:min-h-screen w-full flex flex-col justify-end p-8 md:p-16 lg:p-24 overflow-hidden border-b border-neutral-900 group"
+            className="relative min-h-[85vh] md:min-h-screen w-full flex flex-col justify-end p-8 md:p-16 lg:p-24 overflow-hidden border-b border-neutral-900 group"
           >
             {/* Background Parallax Image */}
             <div className="absolute inset-0 z-0 overflow-hidden bg-neutral-950">
-              {/* Overlay Hitam untuk menjaga kontras teks (Dark Mode murni) */}
               <div className="absolute inset-0 bg-[#050505]/70 z-10 transition-colors duration-700 group-hover:bg-[#050505]/40" />
               <div className="absolute inset-0 bg-linear-to-t from-[#050505] via-[#050505]/50 to-transparent z-10" />
 
@@ -139,7 +144,7 @@ export default function Services() {
               />
             </div>
 
-            {/* Konten Layanan (Tumpang tindih di atas gambar) */}
+            {/* Konten Layanan */}
             <div className="content-fade relative z-20 w-full">
               <div className="flex items-end justify-between mb-8 border-b border-white/10 pb-6">
                 <div className="flex flex-col gap-2">
@@ -160,7 +165,7 @@ export default function Services() {
               </p>
 
               {/* Minimalist Specs Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
                 {service.specs.map((spec, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#D67341]" />
@@ -169,6 +174,36 @@ export default function Services() {
                     </span>
                   </div>
                 ))}
+              </div>
+
+              {/* =========================================
+                  PREMIUM INTERACTIVE BUTTON (Apple-Grade)
+              ========================================= */}
+              <div className="w-full flex justify-start">
+                <Link
+                  href={service.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-4 px-6 py-3.5 bg-white/5 backdrop-blur-md border border-neutral-800 rounded-full text-[11px] font-mono tracking-[0.15em] uppercase text-white hover:border-[#D67341] hover:bg-[#D67341] hover:text-[#050505] transition-all duration-500 ease-out shadow-lg"
+                >
+                  <span>{service.btnText}</span>
+
+                  {/* Ikon Panah Diagonal Bersih */}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2.5}
+                    stroke="currentColor"
+                    className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>
+                </Link>
               </div>
             </div>
           </div>

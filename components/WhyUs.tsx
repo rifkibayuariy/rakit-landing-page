@@ -193,6 +193,7 @@ export default function WhyUs() {
 
   return (
     <section
+      id="why-us"
       ref={sectionRef}
       className="relative w-full overflow-hidden border-t border-neutral-900 bg-[#050505]"
     >

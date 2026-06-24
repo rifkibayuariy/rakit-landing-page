@@ -97,6 +97,7 @@ export default function Testimonials() {
 
   return (
     <section
+      id="review"
       ref={containerRef}
       className="relative w-full bg-[#050505] text-white py-32 md:py-48 overflow-hidden border-t border-neutral-900"
     >

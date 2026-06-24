@@ -194,6 +194,7 @@ function FAQRow({
 
   return (
     <div
+      id="faq"
       ref={rowRef}
       className="faq-item-row w-full border-b border-neutral-900 first:border-t first:border-neutral-900 group"
     >
