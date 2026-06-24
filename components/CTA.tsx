@@ -5,7 +5,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { sendGAEvent } from "@next/third-parties/google";
-import Link from "next/link";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -145,7 +144,7 @@ export default function CTA() {
             KOLOM KANAN: ADAPTIVE BUTTON
         ========================================= */}
         <div className="w-full lg:w-5/12 flex justify-center lg:justify-end pb-8 lg:pb-10">
-          <Link
+          <a
             href="https://wa.me/6281937894157"
             target="_blank"
             ref={buttonRef}
@@ -208,7 +207,7 @@ export default function CTA() {
                 ></polyline>
               </svg>
             </div>
-          </Link>
+          </a>
         </div>
       </div>
     </section>

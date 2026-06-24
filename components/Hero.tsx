@@ -4,7 +4,6 @@ import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { sendGAEvent } from "@next/third-parties/google";
-import Link from "next/link";
 
 gsap.registerPlugin(useGSAP);
 
@@ -340,7 +339,7 @@ export default function Hero() {
 
           {/* Magnetic CTA Button */}
           <div className="hero-desc mt-2 w-full sm:w-fit">
-            <Link
+            <a
               href="https://wa.me/6281937894157"
               target="_blank"
               ref={btnRef}
@@ -388,7 +387,7 @@ export default function Hero() {
                   />
                 </svg>
               </div>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

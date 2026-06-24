@@ -7,7 +7,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { sendGAEvent } from "@next/third-parties/google";
-import Link from "next/link";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -180,7 +179,7 @@ export default function Services() {
                   PREMIUM INTERACTIVE BUTTON (Apple-Grade)
               ========================================= */}
               <div className="w-full flex justify-start">
-                <Link
+                <a
                   href={service.url}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -210,7 +209,7 @@ export default function Services() {
                       d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
                     />
                   </svg>
-                </Link>
+                </a>
               </div>
             </div>
           </div>

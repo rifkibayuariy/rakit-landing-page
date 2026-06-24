@@ -159,7 +159,7 @@ export default function Footer() {
             Inisiasi Cetak Biru Anda
           </p>
 
-          <Link
+          <a
             href="mailto:rakit@gmail.com"
             onClick={() =>
               sendGAEvent({
@@ -176,7 +176,7 @@ export default function Footer() {
               </span>
             </div>
             <div className="absolute bottom-0 left-0 w-full h-0.75 md:h-1.25 bg-[#D67341] scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-700 ease-out"></div>
-          </Link>
+          </a>
         </div>
 
         {/* =========================================
@@ -230,7 +230,7 @@ export default function Footer() {
             </h4>
             <div className="flex flex-col border-t border-neutral-900/60">
               {jaringanData.map((social) => (
-                <Link
+                <a
                   key={social.name}
                   href={social.url}
                   target="_blank"
@@ -264,7 +264,7 @@ export default function Footer() {
                       <polyline points="12 5 19 12 12 19"></polyline>
                     </svg>
                   </div>
-                </Link>
+                </a>
               ))}
             </div>
           </div>
