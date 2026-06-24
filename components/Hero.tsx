@@ -3,7 +3,7 @@
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-
+import { sendGAEvent } from "@next/third-parties/google";
 import Link from "next/link";
 
 gsap.registerPlugin(useGSAP);
@@ -344,6 +344,14 @@ export default function Hero() {
               href="https://wa.me/6281937894157"
               target="_blank"
               ref={btnRef}
+              rel="noopener noreferrer"
+              onClick={() =>
+                sendGAEvent({
+                  event: "click_cta",
+                  category: "Contact",
+                  label: "WhatsApp Hero",
+                })
+              }
               className="group relative flex items-center justify-between sm:justify-start gap-6 w-full sm:w-fit px-6 sm:px-8 py-3.5 bg-black/40 backdrop-blur-sm border border-neutral-800 rounded-full overflow-hidden transition-colors duration-500 hover:border-[#D67341] cursor-pointer shadow-xl will-change-transform"
             >
               <div className="absolute inset-0 w-full h-full bg-[#D67341] translate-y-[101%] group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] rounded-full" />

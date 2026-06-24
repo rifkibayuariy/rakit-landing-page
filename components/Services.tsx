@@ -6,7 +6,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-
+import { sendGAEvent } from "@next/third-parties/google";
 import Link from "next/link";
 
 if (typeof window !== "undefined") {
@@ -184,6 +184,13 @@ export default function Services() {
                   href={service.url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() =>
+                    sendGAEvent({
+                      event: "click_services",
+                      category: "Services",
+                      label: service.title,
+                    })
+                  }
                   className="inline-flex items-center gap-4 px-6 py-3.5 bg-white/5 backdrop-blur-md border border-neutral-800 rounded-full text-[11px] font-mono tracking-[0.15em] uppercase text-white hover:border-[#D67341] hover:bg-[#D67341] hover:text-[#050505] transition-all duration-500 ease-out shadow-lg"
                 >
                   <span>{service.btnText}</span>

@@ -4,7 +4,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-
+import { sendGAEvent } from "@next/third-parties/google";
 import Link from "next/link";
 
 if (typeof window !== "undefined") {
@@ -151,6 +151,14 @@ export default function CTA() {
             ref={buttonRef}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
+            rel="noopener noreferrer"
+            onClick={() =>
+              sendGAEvent({
+                event: "click_cta",
+                category: "Contact",
+                label: "WhatsApp Section CTA",
+              })
+            }
             // Mobile: Lebar 100% dengan padding (Kapsul). Desktop: Lingkaran Statis 288x288 px.
             className="relative flex items-center justify-center w-full py-5 px-6 rounded-full md:w-64 md:h-64 lg:w-72 lg:h-72 md:py-0 bg-white text-black hover:bg-[#D67341] transition-colors duration-500 z-20 cursor-pointer group shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:shadow-[0_0_60px_rgba(214,115,65,0.3)] shrink-0"
           >
