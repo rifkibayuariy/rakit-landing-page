@@ -124,8 +124,8 @@ export default function Footer() {
         ref={marqueeRef}
         className="relative border-b border-neutral-900 overflow-hidden py-10"
       >
-        <div className="absolute left-0 top-0 h-full w-32 md:w-48 z-10 pointer-events-none bg-gradient-to-r from-[#050505] to-transparent" />
-        <div className="absolute right-0 top-0 h-full w-32 md:w-48 z-10 pointer-events-none bg-gradient-to-l from-[#050505] to-transparent" />
+        <div className="absolute left-0 top-0 h-full w-32 md:w-48 z-10 pointer-events-none bg-linear-to-r from-[#050505] to-transparent" />
+        <div className="absolute right-0 top-0 h-full w-32 md:w-48 z-10 pointer-events-none bg-linear-to-l from-[#050505] to-transparent" />
 
         <div className="marquee-track flex w-max items-center gap-4">
           {[...Array(2)].map((_, i) => (
@@ -161,9 +161,9 @@ export default function Footer() {
 
           <Link
             href="mailto:rakit@gmail.com"
-            className="group block w-max relative overflow-hidden"
+            className="group block w-max relative"
           >
-            <div className="massive-text flex overflow-hidden">
+            <div className="massive-text flex">
               <span className="inline-block text-[10vw] sm:text-[9vw] md:text-[7vw] font-medium tracking-tighter leading-[0.8] text-white group-hover:text-[#D67341] transition-colors duration-500 pr-4">
                 rakit@gmail.com
               </span>
